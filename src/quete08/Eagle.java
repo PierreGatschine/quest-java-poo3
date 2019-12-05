@@ -1,6 +1,6 @@
 package quete08;
 
-public class Eagle extends Bird implements Fly{
+public class Eagle extends Bird implements Fly {
 
     private boolean flying;
     private int altitude;
@@ -28,7 +28,7 @@ public class Eagle extends Bird implements Fly{
 	public void takeOff() {
 		if(!this.isFlying() && this.altitude==0) {
 			this.flying=true;
-			System.out.printf("%s takes flight %n", this.getName());
+			System.out.printf("%s takes off in the sky %n", this.getName());
 		}
 	}
 
@@ -36,7 +36,7 @@ public class Eagle extends Bird implements Fly{
 	public int ascend(int meters) {
 		if (this.isFlying()) {
             this.altitude += meters;
-            System.out.printf("%s climbs the sky and its altitude is : %d%n", this.getName(), this.altitude);
+            System.out.printf("%s flies upward, altitude : %d%n", this.getName(), this.altitude);
         }
         return this.altitude;
 	}
@@ -45,7 +45,7 @@ public class Eagle extends Bird implements Fly{
 	public int descend(int meters) {
 		if (this.isFlying()) {
             this.altitude -= meters;
-            System.out.printf("%s makes a descent, and his altitude : %d%n", this.getName(), this.altitude);
+            System.out.printf("%s flies downward,, and his altitude : %d%n", this.getName(), this.altitude);
         }
         return this.altitude;
 	}
@@ -53,9 +53,9 @@ public class Eagle extends Bird implements Fly{
 	@Override
 	public void land() {
 		if (this.isFlying() && this.altitude <= 2) {
-            System.out.printf("%s is on the floor.%n", this.getName());
+            System.out.printf("%s lands on the ground.%n", this.getName());
         } else {
-            System.out.printf("%s is too high, it can't landing.%n", this.getName());
+            System.out.printf("%s is too high, it can't lands.%n", this.getName());
         }
 	}
 }
